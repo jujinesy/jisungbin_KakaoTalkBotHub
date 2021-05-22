@@ -8,13 +8,15 @@
         tools:ignore="HardcodedText,SmallSp"
         tools:showIn="@layout/activity_script_edit">
 
-    <me.testica.codeeditor.Editor
+    <com.sungbin.texteditor.library.ui.SimpleCodeEditor
             android:layout_marginTop="@dimen/margin_half"
-            android:id="@+id/editor"
-            app:textSize="16sp"
+            android:id="@+id/sce_editor"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_above="@+id/toolkey"/>
+            android:layout_above="@+id/toolkey"
+            app:sce_selectLineColor="@color/colorPrimary"
+            app:sce_lineNumberColor="@color/colorGray"
+            app:sce_lineColor="@color/colorGray"/>
 
     <TextView
             tools:visibility="visible"
@@ -53,7 +55,7 @@
                     android:layout_height="48dp"
                     android:background="@null"
                     android:backgroundTint="@color/colorWhite"
-                    android:contentDescription="@string/string_indent"
+                    android:contentDescription="@string/indent"
                     android:src="@drawable/ic_format_indent_increase_black_24dp" />
 
 

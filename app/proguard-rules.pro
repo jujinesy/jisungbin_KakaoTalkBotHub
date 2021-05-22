@@ -1,6 +1,6 @@
 # Add project specific ProGuard rules here.
 # You can control the set of applied configuration files using the
-# proguardFiles setting in build.gradle.
+# proguardFiles setting in build.gradle.kts.
 #
 # For more details, see
 #   http://developer.android.com/guide/developing/tools/proguard.html
@@ -27,3 +27,20 @@
   	  public *; protected *;
 }
 -dontwarn android.webkit.**
+
+-keep class * extends com.stfalcon.chatkit.messages.MessageHolders$OutcomingTextMessageViewHolder {
+     public <init>(android.view.View, java.lang.Object);
+     public <init>(android.view.View);
+}
+-keep class * extends com.stfalcon.chatkit.messages.MessageHolders$IncomingTextMessageViewHolder {
+     public <init>(android.view.View, java.lang.Object);
+     public <init>(android.view.View);
+}
+-keep class * extends com.stfalcon.chatkit.messages.MessageHolders$IncomingImageMessageViewHolder {
+     public <init>(android.view.View, java.lang.Object);
+     public <init>(android.view.View);
+}
+-keep class * extends com.stfalcon.chatkit.messages.MessageHolders$OutcomingImageMessageViewHolder {
+     public <init>(android.view.View, java.lang.Object);
+     public <init>(android.view.View);
+}
